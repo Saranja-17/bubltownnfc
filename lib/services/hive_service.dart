@@ -11,7 +11,10 @@ class HiveService {
     return appDocPath;
   }
 
-  static Future saveToHive({required String name, required dynamic value, required String boxName}) async {
+  static Future saveToHive(
+      {required String name,
+      required dynamic value,
+      required String boxName}) async {
     //Initialize Hive
     // Hive.init(await _getAppDirectory());
 
@@ -23,21 +26,23 @@ class HiveService {
     // box.close();
   }
 
-  static Future retrieveFromHive({required String name, required String boxName}) async {
+  static Future retrieveFromHive(
+      {required String name, required String boxName}) async {
     //Initialize Hive
     // Hive.init(await _getAppDirectory());
 
     //Open Hive box
     var box = await Hive.openBox(boxName);
 
-    var _result = await box.get(name);
+    var result = await box.get(name);
 
     // box.close();
 
-    return _result;
+    return result;
   }
 
-  static Future removeFromHive({required String name, required String boxName}) async {
+  static Future removeFromHive(
+      {required String name, required String boxName}) async {
     var box = await Hive.openBox(boxName);
     await box.delete(name);
   }

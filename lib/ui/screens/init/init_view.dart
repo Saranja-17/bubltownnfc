@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class InitView extends StatelessWidget {
   const InitView({super.key});
@@ -108,25 +106,25 @@ class InitView extends StatelessWidget {
             ),
             ListTile(
                 leading: const Icon(Icons.movie),
-                title: new Text("Movies"),
+                title: const Text("Movies"),
                 onTap: () {
                   Navigator.pop(context);
                 }),
             ListTile(
                 leading: const Icon(Icons.shopping_cart),
-                title: new Text("Shopping"),
+                title: const Text("Shopping"),
                 onTap: () {
                   Navigator.pop(context);
                 }),
             ListTile(
                 leading: const Icon(Icons.apps),
-                title: new Text("Apps"),
+                title: const Text("Apps"),
                 onTap: () {
                   Navigator.pop(context);
                 }),
             ListTile(
                 leading: const Icon(Icons.library_music),
-                title: new Text("Music"),
+                title: const Text("Music"),
                 onTap: () {
                   Navigator.pop(context);
                 }),
