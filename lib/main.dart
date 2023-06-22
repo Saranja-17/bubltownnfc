@@ -1,9 +1,6 @@
-import 'package:bubltown_nfc/rout.dart';
-import 'package:bubltown_nfc/ui/screens/init/init_view.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
 import 'providers/locator.dart';
+import 'ui/screens/init/vendor_view/vendor_view.dart';
 
 void main() {
   setup();
@@ -18,8 +15,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: InitView(),
+    return const MaterialApp(
+      home: VendorView(),
     );
 
     // ChangeNotifierProvider.value(
